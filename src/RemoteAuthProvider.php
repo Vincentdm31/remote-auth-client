@@ -20,7 +20,7 @@ class RemoteAuthProvider extends ServiceProvider
         ], ['remote-auth-client']);
 
         $this->publishes([
-            __DIR__ . '/RemotheAuthClient/' => app_path('Http/Controllers/RemoteAuthClient/'),
+            __DIR__ . '/RemoteAuthClient' => app_path('Http/Controllers/RemoteAuthClient'),
 
         ], ['remote-auth-client']);
 
