@@ -42,5 +42,6 @@ class RemoteAuthProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->app['router']->aliasMiddleware('remote_auth', \Laravins\RemoteAuthClient\RemoteAuthManager::class);
     }
 }

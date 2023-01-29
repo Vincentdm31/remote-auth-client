@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Laravins\RemoteAuthClient;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
 class RemoteAuthManager
 {
@@ -19,7 +18,6 @@ class RemoteAuthManager
     {
         $pass = $request->json('auth_pass');
 
-        Log::info($pass);
         if (!isset($pass)) {
             return response()->json(['msg' => 'remote password needs to be set'], 403);
         }
