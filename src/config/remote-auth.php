@@ -2,7 +2,7 @@
 
 return [
     // Prefix for generated routes
-    'route_prefix' => 'remote-auth',
+    'route_prefix' => 'api/remote-auth',
 
     //Routes to enable/disable
     'routes' => [
