@@ -16,26 +16,18 @@ composer require laravins/remote-auth-client
 
 This will install the package inside your project.
 
-- `Config file` located at `config/remote-auth/remote-auth-manager.php`
-- `Dashboard` located at `resources/views/remote-auth/dashboard.blade.php`
-- `Controller` located at `Http/Controllers/RemoteAuth/RemoteAuthController.php`
-- `JS files` located at `resources/js/remote-auth/`
+- `Config file` located at `config//remote-auth.php`
+- `Controller` located at `Http/Controllers/RemoteAuthClient/RemoteAuthController.php`
+- `Middleware` located at `Htpp\Middlewares/RemoteAuthManager`
 
 Publish files
 ```
-REMOTE_AUTH_PASS=pgmpgm
-
-php artisan vendor:publish --tag=remote-auth --ansi --force
+php artisan vendor:publish --tag=remote-auth-client --ansi --force
 ```
 
-Add this line to your webpack.mix.js at root of your project
-```js
-mix.js('resources/js/remote-auth/index.js', 'public/js/remote-auth.js')
-```
 
 ```
-npm i
-npm run dev
+
 ```
 <br/>
 

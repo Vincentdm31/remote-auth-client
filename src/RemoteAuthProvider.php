@@ -2,7 +2,6 @@
 
 namespace Laravins\RemoteAuthClient;
 
-use App\Http\Controllers\RemoteAuth\RemoteAuthController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\ServiceProvider;
 
@@ -43,5 +42,7 @@ class RemoteAuthProvider extends ServiceProvider
     public function boot()
     {
         $this->app['router']->aliasMiddleware('remote_auth', \Laravins\RemoteAuthClient\RemoteAuthManager::class);
+        RemoteAuth::routes();
+        
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Helpers\RemoteAuthClient;
+namespace Laravins\RemoteAuthClient;
 
 use App\Http\Controllers\RemoteAuthClient\RemoteAuthController;
 use Error;
