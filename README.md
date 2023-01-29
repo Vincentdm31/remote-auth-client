@@ -11,7 +11,7 @@ Working with LaravinsRemoteAuth
 **Installation**
 
 ```
-composer require laravins/remote-auth
+composer require laravins/remote-auth-client
 ```
 
 This will install the package inside your project.
