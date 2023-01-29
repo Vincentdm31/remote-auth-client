@@ -16,7 +16,7 @@ class RemoteAuthProvider extends ServiceProvider
     public function register()
     {
         $this->publishes([
-            __DIR__ . '/config/remote-auth.php' => config_path('remote-auth/remote-auth.php'),
+            __DIR__ . '/config/remote-auth.php' => config_path('remote-auth.php'),
         ], ['remote-auth-client']);
 
         $this->publishes([
