@@ -25,10 +25,11 @@ Publish files
 php artisan vendor:publish --tag=remote-auth-client --ansi --force
 ```
 
-
+```
+//.env
+REMOTE_AUTH_PASS=secretpass
 ```
 
-```
 <br/>
 
 ***
@@ -43,12 +44,21 @@ This config file will allow you to remotely manage your users off `https://my-we
 <?php
 
 return [
-    //Put here your endpoints
-    [
-        'name' => 'Locked',
-        'url' => 'https://my-website.com/',
-        'password' => 'mysecretpass'
+    // Prefix for generated routes
+    'route_prefix' => 'api/remote-auth',
+
+    //Routes to enable/disable
+    'routes' => [
+        'list' => true,
+        'insert' => true,
+        'update' => true,
+        'delete' => true,
+        'down' => true,
+        'up' => true,
     ],
+
+    // password used to authenticate requests
+    'password' => env('REMOTE_AUTH_PASS', null)
 ];
 
 ```
